@@ -1,0 +1,351 @@
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+At 09:30 PM 2/3/2001 +0100, you wrote:
+
+>Is there a way to add an include and a lib path from the source file? (or
+>another solution)
+
+    You can do it per-project:
+
+Project->Settings->C/C++->Preprocessor->Additional include directories
+Project->Settings->Link->Input->Additional library path
+
+    Then, you duplicate the project file, so you have one for each version 
+of the MAX SDK.
+
+    Alternatively, you could make different configurations for MAX2 and 
+MAX4 SDKs, because the project settings are independent for each configuration.
+
+    Another option is to make a project out of each SDK. We do that with 
+DirectX (6, 7 and 8) and Havok here, for example. Then, you add #defines to 
+select the SDK and so include files from each SDK as:
+
+---
+#if MAX_SDK_3
+#include <MAX3/file.h>
+#pragma comment (lib, "MAX3/LIBFILE.LIB")
+#elif MAX_SDK_4
+#include <MAX4/file.h>
+#pragma comment (lib, "MAX4/LIBFILE.LIB")
+#else
+#error You must select a MAX SDK!!
+#endif
+---
+
+    As yet another option, you could replicate all the include file with 
+dummies that just include the headers and libraries from the proper SDK.
+
+    Choices, choices...
+
+
+    Salutaciones,
+                               JCAB
+
+
+
+
+
+
+check status exporter
+
+mettre les settings dans les user props
+
+keyframes
+anim des materials? FOV? Etc
+
+global scaling => scale des features genre light ranges et camera clip planes..
+
+/******************************************************************************
+Need some help about coordinates systems and Node/Geometry/Pivot relations ???
+ - LCS = Local Coordinates System
+ - PCS = Pivot Coordinates System
+ - WCS = World Coordinates System
+ - Node : Anything which can be selected in Max Scene (Objects, Lights, ...)
+ - Geometry : Physical representation of a node
+
+ ------------------------------------------------------------------------------
+ -For Geometry Coordinates System Operations
+ * Geometry's Vertices coordinates are relative to the LCS
+ * LCS -> WCS : mtx = GetObjectTM();
+ * LCS -> PCS : mtx = GetObjectTM() * Inverse(GetNodeTM());
+ * PCS -> WCS : mtx = GetNodeTM();
+
+ ------------------------------------------------------------------------------
+ -For relation between node and geometry (in WCS)
+ * Geometry = GetObjectTM();
+ * Node = GetNodeTM();
+ * Geometry = GetObjOffsetPos() * GetObjOffsetRot() * GetObjOffsetScale() * GetNodeTM()
+******************************************************************************/
+
+Export rules:
+- only standard / multi sub mtls
+- textures
+- clip planes
+- one light to see something
+- invert textures
+- global prs....?
+- etc
+
+new 1.18
+
+- Bugfix: fixed a bug in texture resizing ("unlimited" not always working)
+- Now using angles instead of areas to compute normals (GUI to fix+thanks)
+- New user props: FLX_LinearVelocity & FLX_AngularVelocity
+- CHUNK_ZCB_VER = 4 => added linear & angular velocities
+- added "suggested filename"
+- new option "auto copy textures"
+
+new 1.17
+
+- far clip track is now exported ("Far Clip " bug)
+- completed export keyframed attrib tracks (to check)
+- new space-warp method to override in format plugs
+- gravity & wind objects
+- Scene parameter: FLX_Tesselation, FLX_LightingMode
+- CHUNK_MAIN_VER = 6 => scene tesselation & scene lighting mode
+- Fixed a bug that made Flex crash when texture names were null
+- Fixed a bug in quat's "!="
+- Added XYZ controllers (keyframes)
+- Added texture tiling in TextureTransform class
+- CHUNK_TEXM_VER = 3, CHUNK_MATL_VER = 4 => added texture tiling
+- Added billboards
+- Custom Flexporter material: shader file, user props, decal texture, detail texture
+- CHUNK_MATL_VER = 7 => added custom material parameters
+- Added a warning when exporting an instance whose material is different from the master's one
+- Changed user props export commands (à changer dans les headers/docs)
+- fixed crop equations (doc à updater)
+- DOC TO UPDATE: space warp checkbox
+- new user prop commands to force/discard IK (doc to update)
+- Now supports MAX5 render-to-texture materials
+- Fixed a bug with vertex alpha consolidation
+- A new checkbox to discard texture alpha
+- Old lightmapper removed, new vertex lighter added + vertex data modifier (doc à updater)
+- Fixed a crash that happened with hidden instances in some situations (thanks Adam M.)
+- Filename = current MAX filename (thanks to Miguel Melo for the idea)
+- Fixed a bug with MAX5 and W2K / WXP
+- Compression settings moved to ZCB options (not in the generic panel)
+- MAX3 not supported anymore
+
+new 1.16
+
+- material sharing
+- some checkboxes are now radio buttons (doc to update)
+- scene prop override: GlobalScale = <float>
+- changed is_animated (PR controller export) => controller export bug fixed
+- plane primitive
+- scene help text
+- CHUNK_MAIN_VER = 4 => scene help text + gravity added
+- CHUNK_ZCB_VER = 3 => extra physics params
+- built-in ResetPivot
+- ScaledMorph bug fix
+- "MAXPoint", etc => NakedPoint
+- d3d conversion now applied to keyframes
+
+new 1.151
+
+- printf bugfix in ASCII exporter (%f => %d)
+- added a warning on negative bounding sphere radius out of Meshmerizer
+- improved robustness of bounding sphere generation
+- a new checkbox to make the difference between PHYSIQUE & SKIN modifiers
+- fixed a little bug in the SKIN export
+- fixed various ICE bugs
+- NovodeX exporter 1.03
+
+new 1.15
+- Flexporter logos !
+- MAX 5
+- user-defined frame conversion callbacks
+- pivot position has been negated => actually totally rewritten
+- pivot scale is now exported and negative pivot scaling is detected => actually totally rewritten
+- explicit parent name added to base info
+- fileselect now handles complex extensions correctly
+- fileselect can be overriden by custom formats
+- Better handling of animated nodes (sometimes motion tracks resulting from IK weren't sampled)
+- DEBUG_DUMP_SUBANIMS
+- most recently used exporter automatically selected
+- GUI callbacks in custom exporters
+- New option for global scene scaling
+- New option to add user-props to many nodes at once
+- New warnings for "texname only" when sizes > allowed or not power of 2
+- "About plug-in"
+- Added support for MAX primitives
+- CHUNK_MESH_VER = 8 => added primitive data
+- CHUNK_MAIN_VER = 3 => global scale added to MainDescriptor structure
+- New option to export instances as real meshes
+- export projector textures
+- CHUNK_LITE_VER = 4 => two texture IDs for projectors
+- Added shape type
+- CHUNK_SHAP_VER = 3 => shape type added
+- mLinkID => mTargetID & mMasterID => clearer
+- CHUNK_ZCB_VER = 0x20000 => basic info with TargetID / MasterID now
+- New bools in meshes for ReceiveShadows & MotionBlur
+- CHUNK_MESH_VER = 9 => added bools for ReceiveShadows & MotionBlur
+- groups are now rebuilt by Flexporter
+- CHUNK_HELP_VER = 3 => grouped objects' IDs are exported
+- export extended self-illum (request by Scott Newby)
+- CHUNK_MATL_VER = 3 => extended self-illum
+- Vertex alpha now included in consolidation and ZCB files
+- Experimental IK support (exposed, may not be used by native ASCII & ZCB formats)
+- New helper types
+- Derived cameras/lights/helpers weren't exported !
+- Instance information for cameras/lights/helpers/shapes
+- A new option to setup local settings => printf stuff
+
+new 1.14 (unreleased NVIDIA version)
+- CHUNK_MESH_VER = 7 pour meshbuilder fix udword (zcb format doc to update)
+- a new checkbox to convert shapes to meshes on export (doc to update)
+- FORCESHAPETOMESH / DISCARDSHAPETOMESH
+- better log info (warning for none materials, etc)
+- fixed memory leaks "we own the copy"
+- exposed material opacity controller
+- new checkboxes for ForceSpecular & ForceFilter (doc to update)
+- vertex alpha support (not in consolidated data nor in ZCB files)(request by Jed Adams)
+- auto-load..... or not
+- Tom Forsyth's cache optimizer for consolidation
+- Bones local ID & bones names exposed, not only CSIDs
+
+new 1.13
+- I should have done that a long time ago: .def files have been ditched. Hopefully there won't be missing functions anymore (cf "GetEnabled" fixed in 1.12)
+- auto-unload feature
+- auto-load settings
+- save one filename / format
+- crop values & texture matrix now initialized for default material
+- material limit has been removed. Some of you reached it though it was set to 10000. I don't even want to know *how* you did!
+- "GetEnabled" has been renamed to "GetEnabledSettings" because it was conflicting with an MFC method (thanks Greg Douglas)
+So warning, you'll have to update your plug-ins.
+- motion data are now converted to D3D. Same for offset vectors.
+- CHUNK_MOVE_VER = 4, there's an extra bool for D3D compliance (update format doc)
+- CHUNK_MESH_VER = 6 to reflect the changes in the skins
+- Units exposed in the MainDescriptor structure. Note it has not been exported in ZCB / Ascii files, only exposed to your own formats. [lack of time]
+
+new 1.12
+- FOV type & camera type for cameras, CHUNK_CAMS_VER = 2
+- Fixed a bug in the ZCBBreaker code (consolidation, thanks to Joe)
+- Improved resize (fixed)
+- GetEnabled missing in the DEF file !
+- Jere Sanisalo bugfix export ASCII
+- Le bug de la dernière frame, thanks to Hervé Denis
+- more keyframes
+
+new 1.11
+- gizmo helpers => new helperdescriptor
+- sdk version should be increased
+- CHUNK_HELP_VER = 2 => gizmo data added
+- a new checkbox to export skins as standard meshes (!=collapse since now morphing works)
+- AHEM, sampling rate........ __forceinline	long		GetSamplingRate()			{ return mSamplingRate>0 ? mSamplingRate : 1;	}
+- AHEM, alpha channel
+- manifold bug
+
+new 1.10
+- Manifold bug fixed
+- Quantize minifix
+- bugfix HasKeyframedAncestor()
+- bugfix CS GetNodeTM........
+- bugfix consolidation morph
+- bugfix scaling des morphed vertices
+- morph controller only exported if !singleframe
+- bones == BIPED parts
+- Invalid materials names are displayed
+- Invalid materials are automatically converted to a default material (so that you can export the scene anyway)
+- FOV controllers (FOVTRACK)
+- Cameras attributes controllers: ...
+- Lights attributes controllers: ...
+- Settings permissions => new SDK version, new flex callback
+- code lifting (mMember, some more const...)
+- 2 new checkboxes to export lit & cam attributes controllers
+- a new checkbox to export helpers ort not (were previously always exported)
+- new commands: EXPORTFOVCTRL, etc
+- CHUNK_CTRL_VER = 2 => owner's type en plus (doc format à updater)
+
+new 1.09
+- New dialog box to get motion name & type
+- CHUNK_MOVE_VER = 3 for them
+- CHUNK_MESH_VER = 5 => CharID exporté pour les skins
+- memory leak fixed on exporting packed ZCB files!
+- fixed a bug in the lightmapper...
+- CHUNK_MATL_VER = 2 => crop values added in materials as well (see the mail by someone)
+- "bugfix" meshbuilder2 smg null skins
+- CHUNK_MAIN_VER = 2 => basic info contient le pivot en plus, et y'a aussi les infos de SummaryInfo....
+- new checkbox to quantize textures => ZCB texture 1 or 2
+- "Export target nodes" moved to meshes in the Options panel, since it controls camera AND light targets
+- Mirrored objects are now correctly exported
+- [sampling to registry]
+- CHUNK_LITE_VER = 3 => 3 new light parameters
+
+new 1.08
+
+- support for MAX4 and CS3
+- new Flexporter SDK (103), to be MAX4-compatible. Some modifs expected in your exporters, but that way
+FLX files are compatible between MAX3 and MAX4.... 
+- exporter projects reorganized
+- new controlled types: POSITION, ROTATION, SCALE
+- non-official support for keyframes..... (unfinished)
+
+new 1.07
+
+- SetLogString()
+- new option to include motion file in the main file
+- new option to take face area into account (docs to update)
+- bounding sphere code improved
+- a new checkbox to discard BIPED parts
+- flip horiz & vert
+- new commands:
+FORCECONSOLIDATION
+DISCARDCONSOLIDATION
+FORCEMANIFOLD
+DISCARDMANIFOLD
+FORCENORMALS
+DISABLENORMALS
+- motion format updated (bool for local prs)
+- material ID is exported for shapes
+- .dli => .flx
+- MeshBuilder2 => cleans better, smoothing groups bug removed
+- CHUNK_MESH_VER = 4 => new bool added for mCastShadows
+- CHUNK_LITE_VER = 2 => new bool added for mCastShadows
+
+new 1.06
+
+- bugfix export lighting
+- bugfix stretch
+- shapes
+
+new 1.05
+
+- pack lighting in vcol
+- compute shadows
+- mesh chunk new version
+- vertex color smoothing
+if((Mesh->mFlags&MESH_TFACE)&&(Mesh->mFlags&MESH_UVW))			mGeomObjects.Store(f[i].TRef[0])	.Store(f[i].TRef[1])	.Store(f[i].TRef[2]);
+if((Mesh->mFlags&MESH_CFACE)&&(Mesh->mFlags&MESH_VERTEXCOLORS))	mGeomObjects.Store(f[i].CRef[0])	.Store(f[i].CRef[1])	.Store(f[i].CRef[2]);
+
+- "Export filenames only" was not working! Now it's fixed, but there's an extra byte in the ZCB format for each texture.
+=> the chunk version has changed
+
+quantize verts, update doc...
+edge vis check box
+quality slider
+code lifting... plugz may not compile anymore, 'm' added, etc
+battoo scaling
+parity skin
+morph controller & MORPH tag
+make manifold
+
+new 1.04
+
+- Unload exporters
+
+new 1.03:
+- registry settings
+- can discard target nodes
+- hidden nodes checkbox - hidden objects aren't exported
+- I don't export replicated textures anymore....
+
+- extra skeletal info exported . BIPED PARTS SHOULDN'T BE EXPORTED (check box)
+
+- sampling check box
+- sampling rate
+- animation ...
+- visibility track
+- fine tuning

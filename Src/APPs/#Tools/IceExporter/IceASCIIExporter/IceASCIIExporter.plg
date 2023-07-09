@@ -1,0 +1,89 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: IceASCIIExporter - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP433.tmp" with contents
+[
+/nologo /MD /W3 /Zi /Od /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "ICEASCIIEXPORTER_EXPORTS" /Fr"Release/" /Fp"Release/IceASCIIExporter.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"Y:\APPs\#Tools\IceExporter\IceASCIIExporter\IceASCIIExportCamera.cpp"
+"Y:\APPs\#Tools\IceExporter\IceASCIIExporter\IceASCIIExportController.cpp"
+"Y:\APPs\#Tools\IceExporter\IceASCIIExporter\IceASCIIExportHelper.cpp"
+"Y:\APPs\#Tools\IceExporter\IceASCIIExporter\IceASCIIExportLight.cpp"
+"Y:\APPs\#Tools\IceExporter\IceASCIIExporter\IceASCIIExportMaterial.cpp"
+"Y:\APPs\#Tools\IceExporter\IceASCIIExporter\IceASCIIExportMesh.cpp"
+"Y:\APPs\#Tools\IceExporter\IceASCIIExporter\IceASCIIExportMotion.cpp"
+"Y:\APPs\#Tools\IceExporter\IceASCIIExporter\IceASCIIExportShape.cpp"
+"Y:\APPs\#Tools\IceExporter\IceASCIIExporter\IceASCIIExportSpaceWarp.cpp"
+"Y:\APPs\#Tools\IceExporter\IceASCIIExporter\IceASCIIExportTexture.cpp"
+"Y:\APPs\#Tools\IceExporter\IceASCIIExporter\IceASCIIExporter.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP433.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP434.tmp" with contents
+[
+/nologo /MD /W3 /Zi /Od /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "ICEASCIIEXPORTER_EXPORTS" /Fr"Release/" /Fp"Release/IceASCIIExporter.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"Y:\APPs\#Tools\IceExporter\IceASCIIExporter\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP434.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP435.tmp" with contents
+[
+IceCore.lib /nologo /dll /incremental:no /pdb:"Release/IceASCIIExporter.pdb" /debug /machine:I386 /out:"C:\3dsmax3_1\IceASCIIExporter.flx" /implib:"Release/IceASCIIExporter.lib" 
+".\Release\IceASCIIExportCamera.obj"
+".\Release\IceASCIIExportController.obj"
+".\Release\IceASCIIExportHelper.obj"
+".\Release\IceASCIIExportLight.obj"
+".\Release\IceASCIIExportMaterial.obj"
+".\Release\IceASCIIExportMesh.obj"
+".\Release\IceASCIIExportMotion.obj"
+".\Release\IceASCIIExportShape.obj"
+".\Release\IceASCIIExportSpaceWarp.obj"
+".\Release\IceASCIIExportTexture.obj"
+".\Release\IceASCIIExporter.obj"
+".\Release\StdAfx.obj"
+"\APIs\Ice\IceCore\Release\IceCore.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP435.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Using ICE Core
+Compiling on Windows...
+Compiling with VC++...
+Compiling...
+IceASCIIExportCamera.cpp
+IceASCIIExportController.cpp
+IceASCIIExportHelper.cpp
+IceASCIIExportLight.cpp
+IceASCIIExportMaterial.cpp
+IceASCIIExportMesh.cpp
+IceASCIIExportMotion.cpp
+IceASCIIExportShape.cpp
+IceASCIIExportSpaceWarp.cpp
+IceASCIIExportTexture.cpp
+IceASCIIExporter.cpp
+Generating Code...
+Linking...
+   Creating library Release/IceASCIIExporter.lib and object Release/IceASCIIExporter.exp
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP439.bat" with contents
+[
+@echo off
+xcopy C:\3dsmax3_1\IceASCIIExporter.flx c:\3dsmax4\ /Q /Y
+xcopy C:\3dsmax3_1\IceASCIIExporter.flx c:\3dsmax5\ /Q /Y
+xcopy C:\3dsmax3_1\IceASCIIExporter.flx d:\3dsmax5\ /Q /Y
+]
+Creating command line "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP439.bat"
+
+1 File(s) copied
+1 File(s) copied
+1 File(s) copied
+
+
+
+<h3>Results</h3>
+IceASCIIExporter.flx - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

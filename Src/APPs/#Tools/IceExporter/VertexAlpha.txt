@@ -1,0 +1,46 @@
+
+Title Accessing the Vertex Alpha and Vertex Illumination Values 
+Version 4.0 
+Keywords Vertex Alpha 
+
+Question
+I am trying to access the new vertex alpha and illumination, but it appears I am accessing the wrong channels 
+
+Answer
+The alpha and ilumination channels are defined in the headers as MAP_ALPHA and MAP_SHADING. However there is also a definition called VDATA_ALPHA, which is defined as 2, if this veriosn of the definition is used you will access data from the wrong channel. If using this you need to use -VDATA_ALPHA at the channel needed is -2
+
+void FPUtility::GetAlphaVal(void)
+{
+	if(ip->GetSelNodeCount()<1)return;
+	INode *node = ip->GetSelNode(0);
+	if(!node)return;
+ 	ObjectState os = node->EvalWorldState(0);
+	Object *obj = os.obj;
+	BOOL delMesh = false;
+
+	if (obj && obj->CanConvertToType(Class_ID(TRIOBJ_CLASS_ID, 0))) { 
+		TriObject * tri = NULL;
+		tri = (TriObject *) obj->ConvertToType(0, Class_ID(TRIOBJ_CLASS_ID, 0));
+		if (obj != tri) 
+			delMesh = true; // we own the copy
+		if (tri) 
+		{
+			Mesh * mesh = &(tri->GetMesh());
+			MeshDelta md(*mesh);
+			BOOL support = mesh->mapSupport(MAP_ALPHA);
+			if(support)
+			{
+				UVVert *alpha = mesh->mapVerts(MAP_ALPHA);
+				for(int i=0;i<getNumVerts();i++)
+				{
+					float a = alpha[i].x;
+				}
+			}
+
+		}
+
+		if (delMesh)
+			delete tri;
+	}
+}
+

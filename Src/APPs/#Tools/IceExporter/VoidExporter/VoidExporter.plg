@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: VoidExporter - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP14A.tmp" with contents
+[
+/nologo /MD /W3 /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "VOIDEXPORTER_EXPORTS" /Fp"Release/VoidExporter.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"Y:\APPs\IceExporter\VoidExporter\VoidExporter.cpp"
+]
+Creating command line "cl.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP14A.tmp" 
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP14B.tmp" with contents
+[
+/nologo /MD /W3 /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "VOIDEXPORTER_EXPORTS" /Fp"Release/VoidExporter.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"Y:\APPs\IceExporter\VoidExporter\StdAfx.cpp"
+]
+Creating command line "cl.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP14B.tmp" 
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP14C.tmp" with contents
+[
+IceCore.lib /nologo /dll /incremental:no /pdb:"Release/VoidExporter.pdb" /machine:I386 /out:"C:\3dsmax3_1\VoidExporter.flx" /implib:"Release/VoidExporter.lib" 
+.\Release\StdAfx.obj
+.\Release\VoidExporter.obj
+\APIs\Ice\IceCore\Release\IceCore.lib
+]
+Creating command line "link.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP14C.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Using ICE Core
+Compiling on Windows...
+Compiling with VC++...
+Compiling...
+VoidExporter.cpp
+Linking...
+   Creating library Release/VoidExporter.lib and object Release/VoidExporter.exp
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP150.bat" with contents
+[
+@echo off
+xcopy C:\3dsmax3_1\VoidExporter.flx c:\3dsmax4\ /Q /Y
+]
+Creating command line "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP150.bat"
+
+1 File(s) copied
+
+
+
+<h3>Results</h3>
+VoidExporter.flx - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

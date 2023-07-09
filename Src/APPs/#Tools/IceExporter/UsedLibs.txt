@@ -1,0 +1,8 @@
+
+ MAX3 Used Libs:
+
+ Mesh.lib
+ Core.lib
+ Geom.lib
+ MaxUtil.lib
+ Bmm.lib

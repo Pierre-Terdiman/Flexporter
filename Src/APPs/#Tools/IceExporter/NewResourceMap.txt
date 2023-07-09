@@ -1,0 +1,10 @@
+
+  Roadmap to add a new resource/option:
+
+  1) Modify resources
+  2) Update FLX_ExportSettings.h
+  3) Update IceOptions.cpp
+  3b) Update FLX_Plug.cpp
+  4) Modify plug-ins
+  5) Take the modif into account
+  6) Update news

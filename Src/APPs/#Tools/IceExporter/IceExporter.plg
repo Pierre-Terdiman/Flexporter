@@ -1,0 +1,300 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Flexporter - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP15C.tmp" with contents
+[
+/nologo /MD /W3 /O2 /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /Fp"Release/Flexporter.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"Y:\APIS\ICE\Flexporter\FLX_BaseInfo.cpp"
+"Y:\APIS\ICE\Flexporter\FLX_CameraDescriptor.cpp"
+"Y:\APIS\ICE\Flexporter\FLX_ControllerDescriptor.cpp"
+]
+Creating command line "cl.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP15C.tmp" 
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP15D.tmp" with contents
+[
+/nologo /out:"Release\Flexporter.lib" 
+.\Release\StdAfx.obj
+.\Release\FLX_BaseInfo.obj
+.\Release\FLX_CameraDescriptor.obj
+.\Release\FLX_ControllerDescriptor.obj
+.\Release\FLX_HelperDescriptor.obj
+.\Release\FLX_JointDescriptor.obj
+.\Release\FLX_LightDescriptor.obj
+.\Release\FLX_MaterialDescriptor.obj
+.\Release\FLX_MAXNativeMesh.obj
+.\Release\FLX_MeshDescriptor.obj
+.\Release\FLX_MotionDescriptor.obj
+.\Release\FLX_ShapeDescriptor.obj
+.\Release\FLX_Skeleton.obj
+.\Release\FLX_SpaceWarpDescriptor.obj
+.\Release\FLX_TextureDescriptor.obj
+.\Release\FLX_Converter.obj
+.\Release\FLX_Plug.obj
+.\Release\FLX_PlugManager.obj
+]
+Creating command line "link.exe -lib @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP15D.tmp"
+<h3>Output Window</h3>
+Compiling...
+FLX_BaseInfo.cpp
+FLX_CameraDescriptor.cpp
+FLX_ControllerDescriptor.cpp
+Generating Code...
+Creating library...
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP15E.bat" with contents
+[
+@echo off
+xcopy release\Flexporter.lib y:\lib /Q /Y
+]
+Creating command line "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP15E.bat"
+
+1 File(s) copied
+<h3>
+--------------------Configuration: IceExporter - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x40c /fo"Release/IceExporter.res" /d "NDEBUG" /d "_AFXDLL" "Y:\APPs\#Tools\IceExporter\IceExporter.rc"" 
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP15F.tmp" with contents
+[
+/nologo /MD /W3 /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_USRDLL" /D "_WINDLL" /D "_AFXDLL" /Fp"Release/IceExporter.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"Y:\APPs\#Tools\IceExporter\FLX_CompilationSettings.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_Exporter.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_Panel.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_About.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_EditBox.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_ExportDlg.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_Fileselect.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_HyperLink.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_Message.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_MotionDlg.cpp"
+"Y:\APPs\#Tools\IceExporter\IceOptions.cpp"
+"Y:\APPs\#Tools\IceExporter\VertexLighterDlg.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_Ask2MAX.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_Controller.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_GlobalInfo.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_MatrixConvert.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_MAXMeshPointer.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_MAXProgressBar.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_TextureCopy.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_UserProps.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_VertexColors.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_CharacterStudio.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_FloatController.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_FOVController.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_MorphController.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_PointController.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_PRSController.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_VisibilityController.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_AddBPatch.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_AddCamera.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_AddController.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_AddHelper.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_AddLight.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_AddMaterial.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_AddMesh.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_AddMotion.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_AddPivot.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_AddPrimitive.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_AddPRS.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_AddSafeMesh.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_AddShape.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_AddSkin.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_AddSpaceWarp.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_AddTexture.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_IK.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_MAXConverter.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_Lightmapper.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_VertexLighter.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_VertexLighterBase.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_VertexLighterLight.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_VertexLighterMaterial.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_VertexLighterMesh.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_VertexDataModifier.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_VertexPrelighter.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_CustomAttrib.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_CustomMaterial.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_ExtendedMaterial.cpp"
+"Y:\APPs\#Tools\IceExporter\FLX_ZCBImporter.cpp"
+]
+Creating command line "cl.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP15F.tmp" 
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP160.tmp" with contents
+[
+/nologo /MD /W3 /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_USRDLL" /D "_WINDLL" /D "_AFXDLL" /Fp"Release/IceExporter.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"Y:\APPs\#Tools\IceExporter\StdAfx.cpp"
+]
+Creating command line "cl.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP160.tmp" 
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP161.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:no /pdb:"Release/IceExporter.pdb" /machine:I386 /nodefaultlib:"libc.lib" /nodefaultlib:"libcd.lib" /out:"C:\3dsmax4\Plugins\IceExporter.dlu" /implib:"Release/IceExporter.lib" 
+".\Release\FLX_CompilationSettings.obj"
+".\Release\StdAfx.obj"
+".\Release\FLX_Exporter.obj"
+".\Release\FLX_Panel.obj"
+".\Release\FLX_About.obj"
+".\Release\FLX_EditBox.obj"
+".\Release\FLX_ExportDlg.obj"
+".\Release\FLX_Fileselect.obj"
+".\Release\FLX_HyperLink.obj"
+".\Release\FLX_Message.obj"
+".\Release\FLX_MotionDlg.obj"
+".\Release\IceOptions.obj"
+".\Release\VertexLighterDlg.obj"
+".\Release\FLX_Ask2MAX.obj"
+".\Release\FLX_Controller.obj"
+".\Release\FLX_GlobalInfo.obj"
+".\Release\FLX_MatrixConvert.obj"
+".\Release\FLX_MAXMeshPointer.obj"
+".\Release\FLX_MAXProgressBar.obj"
+".\Release\FLX_TextureCopy.obj"
+".\Release\FLX_UserProps.obj"
+".\Release\FLX_VertexColors.obj"
+".\Release\FLX_CharacterStudio.obj"
+".\Release\FLX_FloatController.obj"
+".\Release\FLX_FOVController.obj"
+".\Release\FLX_MorphController.obj"
+".\Release\FLX_PointController.obj"
+".\Release\FLX_PRSController.obj"
+".\Release\FLX_VisibilityController.obj"
+".\Release\FLX_AddBPatch.obj"
+".\Release\FLX_AddCamera.obj"
+".\Release\FLX_AddController.obj"
+".\Release\FLX_AddHelper.obj"
+".\Release\FLX_AddLight.obj"
+".\Release\FLX_AddMaterial.obj"
+".\Release\FLX_AddMesh.obj"
+".\Release\FLX_AddMotion.obj"
+".\Release\FLX_AddPivot.obj"
+".\Release\FLX_AddPrimitive.obj"
+".\Release\FLX_AddPRS.obj"
+".\Release\FLX_AddSafeMesh.obj"
+".\Release\FLX_AddShape.obj"
+".\Release\FLX_AddSkin.obj"
+".\Release\FLX_AddSpaceWarp.obj"
+".\Release\FLX_AddTexture.obj"
+".\Release\FLX_IK.obj"
+".\Release\FLX_MAXConverter.obj"
+".\Release\FLX_Lightmapper.obj"
+".\Release\FLX_VertexLighter.obj"
+".\Release\FLX_VertexLighterBase.obj"
+".\Release\FLX_VertexLighterLight.obj"
+".\Release\FLX_VertexLighterMaterial.obj"
+".\Release\FLX_VertexLighterMesh.obj"
+".\Release\FLX_VertexDataModifier.obj"
+".\Release\FLX_VertexPrelighter.obj"
+".\Release\FLX_CustomAttrib.obj"
+".\Release\FLX_CustomMaterial.obj"
+".\Release\FLX_ExtendedMaterial.obj"
+".\Release\FLX_ZCBImporter.obj"
+".\Release\IceExporter.res"
+"\APIs\Ice\IceCore\Release\IceCore.lib"
+"\APIs\Ice\IceImageWork\Release\IceImageWork.lib"
+"\APIs\Ice\IceMaths\Release\IceMaths.lib"
+"\APIs\Ice\Meshmerizer\Release\Meshmerizer.lib"
+"\APIS\ICE\Flexporter\Release\Flexporter.lib"
+"\APIs\Ice\Contact\Release\Contact.lib"
+"\APIs\Ice\IcePrelighter\Release\IcePrelighter.lib"
+"\APIs\Ice\IceRenderer\Release\IceRenderer.lib"
+]
+Creating command line "link.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP161.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Using ICE Core
+Compiling on Windows...
+Compiling with VC++...
+Using ICE Maths
+Using ICE ImageWork
+Using ICE Meshmerizer
+Using OPCODE
+Using ICE Renderer
+Using ICE Prelighter
+Compiling...
+FLX_CompilationSettings.cpp
+FLX_Exporter.cpp
+FLX_Panel.cpp
+FLX_About.cpp
+FLX_EditBox.cpp
+FLX_ExportDlg.cpp
+FLX_Fileselect.cpp
+FLX_HyperLink.cpp
+FLX_Message.cpp
+FLX_MotionDlg.cpp
+IceOptions.cpp
+VertexLighterDlg.cpp
+FLX_Ask2MAX.cpp
+FLX_Controller.cpp
+FLX_GlobalInfo.cpp
+FLX_MatrixConvert.cpp
+FLX_MAXMeshPointer.cpp
+FLX_MAXProgressBar.cpp
+FLX_TextureCopy.cpp
+FLX_UserProps.cpp
+Generating Code...
+Compiling...
+FLX_VertexColors.cpp
+FLX_CharacterStudio.cpp
+FLX_FloatController.cpp
+FLX_FOVController.cpp
+FLX_MorphController.cpp
+FLX_PointController.cpp
+FLX_PRSController.cpp
+FLX_VisibilityController.cpp
+FLX_AddBPatch.cpp
+FLX_AddCamera.cpp
+FLX_AddController.cpp
+FLX_AddHelper.cpp
+FLX_AddLight.cpp
+FLX_AddMaterial.cpp
+FLX_AddMesh.cpp
+FLX_AddMotion.cpp
+FLX_AddPivot.cpp
+FLX_AddPrimitive.cpp
+FLX_AddPRS.cpp
+FLX_AddSafeMesh.cpp
+Generating Code...
+Compiling...
+FLX_AddShape.cpp
+FLX_AddSkin.cpp
+FLX_AddSpaceWarp.cpp
+FLX_AddTexture.cpp
+FLX_IK.cpp
+FLX_MAXConverter.cpp
+FLX_Lightmapper.cpp
+FLX_VertexLighter.cpp
+FLX_VertexLighterBase.cpp
+FLX_VertexLighterLight.cpp
+FLX_VertexLighterMaterial.cpp
+FLX_VertexLighterMesh.cpp
+FLX_VertexDataModifier.cpp
+FLX_VertexPrelighter.cpp
+FLX_CustomAttrib.cpp
+FLX_CustomMaterial.cpp
+FLX_ExtendedMaterial.cpp
+FLX_ZCBImporter.cpp
+Generating Code...
+Linking...
+   Creating library Release/IceExporter.lib and object Release/IceExporter.exp
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP165.bat" with contents
+[
+@echo off
+xcopy C:\3dsmax4\Plugins\IceExporter.dlu C:\3dsmax5\Plugins\ /Q /Y
+xcopy C:\3dsmax4\Plugins\IceExporter.dlu D:\3dsmax5\Plugins\ /Q /Y
+xcopy C:\3dsmax4\Plugins\IceExporter.dlu D:\3dsmax6\Plugins\ /Q /Y
+]
+Creating command line "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP165.bat"
+
+1 File(s) copied
+1 File(s) copied
+1 File(s) copied
+
+
+
+<h3>Results</h3>
+IceExporter.dlu - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

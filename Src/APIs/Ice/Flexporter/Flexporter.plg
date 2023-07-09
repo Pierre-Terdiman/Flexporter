@@ -1,0 +1,61 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Flexporter - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP10C.tmp" with contents
+[
+/nologo /MD /W3 /O2 /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /Fp"Release/Flexporter.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"Y:\APIS\ICE\Flexporter\FLX_Converter.cpp"
+]
+Creating command line "cl.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP10C.tmp" 
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP10D.tmp" with contents
+[
+/nologo /out:"Release\Flexporter.lib" 
+.\Release\StdAfx.obj
+.\Release\FLX_BaseInfo.obj
+.\Release\FLX_CameraDescriptor.obj
+.\Release\FLX_ControllerDescriptor.obj
+.\Release\FLX_HelperDescriptor.obj
+.\Release\FLX_JointDescriptor.obj
+.\Release\FLX_LightDescriptor.obj
+.\Release\FLX_MaterialDescriptor.obj
+.\Release\FLX_MAXNativeMesh.obj
+.\Release\FLX_MeshDescriptor.obj
+.\Release\FLX_MotionDescriptor.obj
+.\Release\FLX_ShapeDescriptor.obj
+.\Release\FLX_Skeleton.obj
+.\Release\FLX_SpaceWarpDescriptor.obj
+.\Release\FLX_TextureDescriptor.obj
+.\Release\FLX_Converter.obj
+.\Release\FLX_Plug.obj
+.\Release\FLX_PlugManager.obj
+]
+Creating command line "link.exe -lib @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP10D.tmp"
+<h3>Output Window</h3>
+Compiling...
+FLX_Converter.cpp
+Spawn Time 0:02.4
+Creating library...
+Spawn Time 0:00.0
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP10E.bat" with contents
+[
+@echo off
+xcopy release\Flexporter.lib y:\lib /Q /Y
+]
+Creating command line "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP10E.bat"
+
+1 File(s) copied
+Spawn Time 0:00.0
+
+
+
+<h3>Results</h3>
+Flexporter.lib - 0 error(s), 0 warning(s)
+Build Time 0:02.9
+</pre>
+</body>
+</html>

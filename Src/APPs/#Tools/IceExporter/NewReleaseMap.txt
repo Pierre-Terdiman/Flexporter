@@ -1,0 +1,28 @@
+
+ Roadmap for a new release:
+
+	- Update version number in FLX_Panel.cpp
+	- Compile for MAX3, MAX4, MAX5 (check release settings & check multithread DLL)
+	- Compile using default new/delete (?)
+	- Update Flexporter DLLs (C:\Code\CoderCornerRsc\Code\Flexporter\dll\FlexporterDLL)
+	- Update Readme.txt (will get copied by Update.bat)
+	- Update Flexporter SDK readme (will get copied by Update.bat)
+	- Update TestZCBBreaker => first run update.bat, then discard the progress bar in copied file (undef the label)
+	- Update the NovodeX readme (will be copied by Update.bat)
+	- Update docs:
+		From C:\Zappy's Lair\CoderCorner\Flexporter
+		To C:\Code\CoderCornerRsc\Code\Flexporter\Doc
+	- Run Update.bat
+
+[	- Copy it to C:\Code\CoderCornerRsc\Code\Flexporter\Readme.txt]
+[	- Update ICE DLLs (C:\Code\CoderCornerRsc\Code\Flexporter\dll\IceDLL)]
+[	- Copy it to C:\Code\CoderCornerRsc\Code\Flexporter\FlexporterSDK]
+[		- Copy 3 directories from Y:\APPs\IceExporter to]
+[			1) C:\Code\CoderCornerRsc\Code\Flexporter\FlexporterSDK\IceASCIIExporter]
+[			2) C:\Code\CoderCornerRsc\Code\Flexporter\FlexporterSDK\IceZCBExporter]
+[			3) C:\Code\CoderCornerRsc\Code\Flexporter\FlexporterSDK\VoidExporter]
+[		- In C:\Code\CoderCornerRsc\Code\Flexporter\FlexporterSDK\FlexporterSDK:]
+[			- Update libs: C:\Code\CoderCornerRsc\Code\Flexporter\FlexporterSDK\FlexporterSDK\Lib]
+[			- Update ZCBHelp & 2 files from Y:\APPs\IceExporter\FlexporterSDK]
+[			- Update Flexporter Includes found in FlexporterSDK.h: C:\Code\CoderCornerRsc\Code\Flexporter\FlexporterSDK\FlexporterSDK\Flexporter includes]
+[			- Update ICE includes: C:\Code\CoderCornerRsc\Code\Flexporter\FlexporterSDK\FlexporterSDK\ICE Includes]

@@ -1,0 +1,110 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "Flexporter"=..\..\APIS\ICE\Flexporter\Flexporter.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "IceASCIIExporter"="..\..\APPs\#Tools\IceExporter\IceASCIIExporter\IceASCIIExporter.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "IceExporter"="..\..\APPs\#Tools\IceExporter\IceExporter.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Flexporter
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "IceZCBExporter"="..\..\APPs\#Tools\IceExporter\IceZCBExporter\IceZCBExporter.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ZLib
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libbz2
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "VoidExporter"="..\..\APPs\#Tools\IceExporter\VoidExporter\VoidExporter.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "ZLib"=..\..\APIs\External\ZLib\ZLib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "libbz2"=..\..\APIs\External\BZip2\Src\libbz2.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

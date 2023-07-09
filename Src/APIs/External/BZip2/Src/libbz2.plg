@@ -1,0 +1,344 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: coldet - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP24.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "COLDET_EXPORTS" /Fp"Release/coldet.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"Y:\APIs\External\coldet\src\box.cpp"
+"Y:\APIs\External\coldet\src\box_bld.cpp"
+"Y:\APIs\External\coldet\src\coldet.cpp"
+"Y:\APIs\External\coldet\src\coldet_bld.cpp"
+"Y:\APIs\External\coldet\src\math3d.cpp"
+"Y:\APIs\External\coldet\src\mytritri.cpp"
+"Y:\APIs\External\coldet\src\sysdep.cpp"
+"Y:\APIs\External\coldet\src\tritri.c"
+]
+Creating command line "cl.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP24.tmp" 
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP25.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:no /pdb:"Release/ColDet.pdb" /machine:I386 /out:"Y:\dll\ColDet.dll" /implib:"Release/ColDet.lib" 
+.\Release\box.obj
+.\Release\box_bld.obj
+.\Release\coldet.obj
+.\Release\coldet_bld.obj
+.\Release\math3d.obj
+.\Release\mytritri.obj
+.\Release\sysdep.obj
+.\Release\tritri.obj
+]
+Creating command line "link.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP25.tmp"
+<h3>Output Window</h3>
+Compiling...
+box.cpp
+box_bld.cpp
+coldet.cpp
+coldet_bld.cpp
+math3d.cpp
+mytritri.cpp
+sysdep.cpp
+tritri.c
+Linking...
+   Creating library Release/ColDet.lib and object Release/ColDet.exp
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP29.bat" with contents
+[
+@echo off
+xcopy release\coldet.lib y:\lib /Q /Y
+]
+Creating command line "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP29.bat"
+
+1 File(s) copied
+<h3>
+--------------------Configuration: IML - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP2A.tmp" with contents
+[
+/nologo /MD /W3 /O2 /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /Fp"Release/IML.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"Y:\APIs\External\IML\IML_ccDoubleHeap.cpp"
+"Y:\APIs\External\IML\IML_Cclist.cpp"
+"Y:\APIs\External\IML\IML_cfVector.cpp"
+"Y:\APIs\External\IML\IML_CodeBook.cpp"
+"Y:\APIs\External\IML\IML_CodeBook4MMX.cpp"
+"Y:\APIs\External\IML\IML_DXTCGen.cpp"
+"Y:\APIs\External\IML\IML_fCodeBook.cpp"
+"Y:\APIs\External\IML\IML_Image.cpp"
+"Y:\APIs\External\IML\IML_ImageDXTC.cpp"
+"Y:\APIs\External\IML\IML_Lloyd.cpp"
+"Y:\APIs\External\IML\IML_LoadFromBMP.cpp"
+"Y:\APIs\External\IML\IML_LoadFromTGA.cpp"
+"Y:\APIs\External\IML\IML_LoadImageFrom.cpp"
+"Y:\APIs\External\IML\IML_MedianCut.cpp"
+"Y:\APIs\External\IML\IML_Table.cpp"
+"Y:\APIs\External\IML\IML_Usage.cpp"
+]
+Creating command line "cl.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP2A.tmp" 
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP2B.tmp" with contents
+[
+/nologo /MD /W3 /O2 /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /Fp"Release/IML.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"Y:\APIs\External\IML\StdAfx.cpp"
+]
+Creating command line "cl.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP2B.tmp" 
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP2C.tmp" with contents
+[
+/nologo /out:"Y:\Lib\IML.lib" 
+.\Release\IML_ccDoubleHeap.obj
+.\Release\IML_Cclist.obj
+.\Release\IML_cfVector.obj
+.\Release\IML_CodeBook.obj
+.\Release\IML_CodeBook4MMX.obj
+.\Release\IML_DXTCGen.obj
+.\Release\IML_fCodeBook.obj
+.\Release\IML_Image.obj
+.\Release\IML_ImageDXTC.obj
+.\Release\IML_Lloyd.obj
+.\Release\IML_LoadFromBMP.obj
+.\Release\IML_LoadFromTGA.obj
+.\Release\IML_LoadImageFrom.obj
+.\Release\IML_MedianCut.obj
+.\Release\IML_Table.obj
+.\Release\IML_Usage.obj
+.\Release\StdAfx.obj
+]
+Creating command line "link.exe -lib @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP2C.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Using ICE Core
+Compiling on Windows...
+Compiling with VC++...
+Compiling...
+IML_ccDoubleHeap.cpp
+IML_Cclist.cpp
+IML_cfVector.cpp
+IML_CodeBook.cpp
+IML_CodeBook4MMX.cpp
+IML_DXTCGen.cpp
+IML_fCodeBook.cpp
+IML_Image.cpp
+IML_ImageDXTC.cpp
+IML_Lloyd.cpp
+IML_LoadFromBMP.cpp
+IML_LoadFromTGA.cpp
+IML_LoadImageFrom.cpp
+IML_MedianCut.cpp
+IML_Table.cpp
+IML_Usage.cpp
+Generating Code...
+Creating library...
+<h3>
+--------------------Configuration: libbz2 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP2D.tmp" with contents
+[
+/nologo /MD /W3 /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/libbz2.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"Y:\APIs\External\BZip2\Src\blocksort.c"
+"Y:\APIs\External\BZip2\Src\bzlib.c"
+"Y:\APIs\External\BZip2\Src\compress.c"
+"Y:\APIs\External\BZip2\Src\crctable.c"
+"Y:\APIs\External\BZip2\Src\decompress.c"
+"Y:\APIs\External\BZip2\Src\huffman.c"
+"Y:\APIs\External\BZip2\Src\randtable.c"
+]
+Creating command line "cl.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP2D.tmp" 
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP2E.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:no /pdb:"Release/libbz2.pdb" /machine:I386 /def:".\libbz2.def" /out:"Y:\dll\libbz2.dll" /implib:"Release/libbz2.lib" 
+.\Release\blocksort.obj
+.\Release\bzlib.obj
+.\Release\compress.obj
+.\Release\crctable.obj
+.\Release\decompress.obj
+.\Release\huffman.obj
+.\Release\randtable.obj
+]
+Creating command line "link.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP2E.tmp"
+<h3>Output Window</h3>
+Compiling...
+blocksort.c
+bzlib.c
+compress.c
+crctable.c
+decompress.c
+huffman.c
+randtable.c
+Linking...
+   Creating library Release/libbz2.lib and object Release/libbz2.exp
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP32.bat" with contents
+[
+@echo off
+xcopy release\libbz2.lib y:\lib /Q /Y
+]
+Creating command line "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP32.bat"
+
+1 File(s) copied
+<h3>
+--------------------Configuration: Rapid - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP33.tmp" with contents
+[
+/nologo /G6 /MD /W3 /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "RAPID_EXPORTS" /Fp"Release/Rapid.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"Y:\APIs\External\Rapid\build.cpp"
+"Y:\APIs\External\Rapid\collide.cpp"
+"Y:\APIs\External\Rapid\overlap.cpp"
+"Y:\APIs\External\Rapid\Rapid.cpp"
+"Y:\APIs\External\Rapid\RapidTest.cpp"
+]
+Creating command line "cl.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP33.tmp" 
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP34.tmp" with contents
+[
+/nologo /G6 /MD /W3 /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "RAPID_EXPORTS" /Fp"Release/Rapid.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"Y:\APIs\External\Rapid\StdAfx.cpp"
+]
+Creating command line "cl.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP34.tmp" 
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP35.tmp" with contents
+[
+/nologo /dll /incremental:no /pdb:"Release/Rapid.pdb" /machine:I386 /out:"Y:\dll\Rapid.dll" /implib:"Release/Rapid.lib" 
+.\Release\build.obj
+.\Release\collide.obj
+.\Release\overlap.obj
+.\Release\Rapid.obj
+.\Release\RapidTest.obj
+.\Release\StdAfx.obj
+]
+Creating command line "link.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP35.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+build.cpp
+collide.cpp
+overlap.cpp
+Rapid.cpp
+RapidTest.cpp
+Generating Code...
+Linking...
+   Creating library Release/Rapid.lib and object Release/Rapid.exp
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP39.bat" with contents
+[
+@echo off
+xcopy release\Rapid.lib y:\lib /Q /Y
+]
+Creating command line "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP39.bat"
+
+1 File(s) copied
+<h3>
+--------------------Configuration: ZLib - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP3A.tmp" with contents
+[
+/nologo /MD /W3 /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "ZLIB_EXPORTS" /Fp"Release/ZLib.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"Y:\APIs\External\ZLib\StdAfx.cpp"
+]
+Creating command line "cl.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP3A.tmp" 
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP3B.tmp" with contents
+[
+/nologo /MD /W3 /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "ZLIB_EXPORTS" /Fo"Release/" /Fd"Release/" /FD /c 
+"Y:\APIs\External\ZLib\adler32.c"
+"Y:\APIs\External\ZLib\compress.c"
+"Y:\APIs\External\ZLib\crc32.c"
+"Y:\APIs\External\ZLib\deflate.c"
+"Y:\APIs\External\ZLib\gzio.c"
+"Y:\APIs\External\ZLib\infblock.c"
+"Y:\APIs\External\ZLib\infcodes.c"
+"Y:\APIs\External\ZLib\inffast.c"
+"Y:\APIs\External\ZLib\inflate.c"
+"Y:\APIs\External\ZLib\inftrees.c"
+"Y:\APIs\External\ZLib\infutil.c"
+"Y:\APIs\External\ZLib\minigzip.c"
+"Y:\APIs\External\ZLib\trees.c"
+"Y:\APIs\External\ZLib\uncompr.c"
+"Y:\APIs\External\ZLib\zutil.c"
+]
+Creating command line "cl.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP3B.tmp" 
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP3C.tmp" with contents
+[
+/nologo /dll /incremental:no /pdb:"Release/ZLib.pdb" /machine:I386 /out:"Y:\dll\ZLib.dll" /implib:"Release/ZLib.lib" 
+.\Release\StdAfx.obj
+.\Release\adler32.obj
+.\Release\compress.obj
+.\Release\crc32.obj
+.\Release\deflate.obj
+.\Release\gzio.obj
+.\Release\infblock.obj
+.\Release\infcodes.obj
+.\Release\inffast.obj
+.\Release\inflate.obj
+.\Release\inftrees.obj
+.\Release\infutil.obj
+.\Release\minigzip.obj
+.\Release\trees.obj
+.\Release\uncompr.obj
+.\Release\zutil.obj
+]
+Creating command line "link.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP3C.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+adler32.c
+compress.c
+crc32.c
+deflate.c
+gzio.c
+infblock.c
+infcodes.c
+inffast.c
+inflate.c
+inftrees.c
+infutil.c
+minigzip.c
+trees.c
+uncompr.c
+zutil.c
+Generating Code...
+Linking...
+   Creating library Release/ZLib.lib and object Release/ZLib.exp
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP40.bat" with contents
+[
+@echo off
+xcopy release\ZLib.lib y:\lib /Q /Y
+]
+Creating command line "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP40.bat"
+
+1 File(s) copied
+<h3>
+--------------------Configuration: ExternalLibraries - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP41.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/ExternalLibraries.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"Y:\WORKSPACES\EXTERNALS\ExternalLibraries\ExternalLibraries.cpp"
+]
+Creating command line "cl.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP41.tmp" 
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP42.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:no /pdb:"Release/ExternalLibraries.pdb" /machine:I386 /out:"Release/ExternalLibraries.exe" 
+.\Release\ExternalLibraries.obj
+\APIs\External\coldet\src\Release\ColDet.lib
+\Lib\IML.lib
+\APIs\External\BZip2\Src\Release\libbz2.lib
+\APIs\External\Rapid\Release\Rapid.lib
+\APIs\External\ZLib\Release\ZLib.lib
+]
+Creating command line "link.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP42.tmp"
+<h3>Output Window</h3>
+Compiling...
+ExternalLibraries.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+ExternalLibraries.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

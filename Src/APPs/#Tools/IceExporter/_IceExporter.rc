@@ -1,0 +1,754 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// French (France) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 12, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\IceExporter.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.fra\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040C04B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "IceExporter DLL\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "IceExporter\0"
+            VALUE "LegalCopyright", "Copyright (C) 2000\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "IceExporter.DLL\0"
+            VALUE "ProductName", "Bibliothèque de liaison dynamique IceExporter\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x40c, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_UTILITY_PANEL DIALOGEX 0, 0, 104, 335
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "About",IDC_ABOUT,0,314,104,13
+    PUSHBUTTON      "Export",IDC_EXPORT,0,53,103,14
+    PUSHBUTTON      "Options",IDC_OPTIONS,0,71,103,14
+    PUSHBUTTON      "Copy textures",IDC_COPY,0,88,103,14
+    CTEXT           "(C) 2000-3 - Pierre Terdiman",IDC_STATIC,7,296,87,10,
+                    SS_CENTERIMAGE
+    GROUPBOX        "",IDC_STATIC,3,289,99,20
+    PUSHBUTTON      "Export BIPED motion",IDC_EXP_BIPED,0,106,103,14
+    PUSHBUTTON      "Unload exporters",IDC_UPDATE,0,125,103,14
+    PUSHBUTTON      "Add user prop",IDC_ADDUSERPROP,0,166,103,14
+    CONTROL         3010,IDC_STATIC,"Static",SS_BITMAP | SS_CENTERIMAGE,0,12,
+                    103,16,WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    PUSHBUTTON      "Customize material",IDC_CUSTOM_MATERIAL,0,270,103,14
+    CTEXT           "-------------- Customize --------------",IDC_STATIC,0,
+                    149,103,8
+    PUSHBUTTON      "Add Flexporter material",IDC_ADD_FLX_MATERIAL,0,184,103,
+                    14
+    PUSHBUTTON      "Remove Flexporter material",IDC_REMOVE_FLX_MATERIAL,0,
+                    201,103,14
+    PUSHBUTTON      "Precompute vertex lighting",IDC_PRECOMPUTE_LIGHTING,0,
+                    237,103,14
+    CTEXT           "-------------- Lighting --------------",IDC_STATIC,0,
+                    222,103,8
+    CTEXT           "Test",IDC_STATIC,0,257,103,8
+    CTEXT           "-------------- Export --------------",IDC_STATIC,0,36,
+                    103,8
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 359, 137
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "About..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,7,77,345,53
+    CTEXT           "Copyright (C) 2000-2003 - Pierre Terdiman (p.terdiman@wanadoo.fr)",
+                    IDC_STATIC,17,86,326,12,SS_CENTERIMAGE
+    CTEXT           "Version X.XX",IDC_VERSION,13,115,331,8
+    CTEXT           "Check homepage !",IDC_NEWVERSION,15,103,326,8
+    CONTROL         3009,IDC_STATIC,"Static",SS_BITMAP,7,7,345,65,
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+END
+
+IDD_EXPORT DIALOGEX 0, 0, 283, 74
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "Please wait while exporting..."
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "",IDC_STATUS,7,15,269,8
+    LTEXT           "",IDC_EXT_STATUS,7,26,269,8
+    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,
+                    7,51,269,9
+END
+
+IDD_MESSAGE DIALOGEX 0, 0, 401, 300
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "Flexporter Message"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT,7,7,387,286,ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL | WS_HSCROLL,WS_EX_STATICEDGE
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 601, 329
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "Flexporter plug-ins options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Next plug-in",IDC_NEXTPLUG,16,95,137,14,0,
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    LTEXT           "Plugname",IDC_PLUGNAME,17,29,130,8
+    GROUPBOX        "General",IDC_STATIC,7,158,152,164
+    GROUPBOX        "Materials",IDC_STATIC,459,150,128,76
+    GROUPBOX        "Textures",IDC_STATIC,321,14,128,218
+    GROUPBOX        "Lights",IDC_STATIC,459,15,128,41
+    GROUPBOX        "Cameras",IDC_STATIC,460,107,128,41
+    GROUPBOX        "Animation",IDC_STATIC,459,228,128,46
+    GROUPBOX        "Meshes",IDC_STATIC,175,15,133,240
+    GROUPBOX        "Selected exporter",IDC_STATIC,7,15,152,137
+    CONTROL         "Export UVW",IDC_EXPUVW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,185,28,55,10
+    CONTROL         "Discard W in UVW",IDC_DISCARDW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,185,38,76,10
+    CONTROL         "Export vertex-colors",IDC_EXPVTXCOL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,185,48,78,10
+    CONTROL         "Use smoothing groups",IDC_USESMG,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,185,57,86,10
+    CONTROL         "Remove scaling",IDC_REMOVESCALING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,185,67,67,10
+    CONTROL         "Override ambient color (white)",IDC_FORCEAMB,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,467,160,114,11
+    CONTROL         "Override diffuse color (white)",IDC_FORCEDIF,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,467,170,114,10
+    CONTROL         "Export cameras",IDC_EXPCAMERAS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,467,118,65,10
+    CONTROL         "Export complete scene",IDC_EXPCOMPLETE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,20,173,88,10
+    CONTROL         "Convert to D3D frame",IDC_CVTD3D,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,185,76,85,10
+    CONTROL         "Export lights",IDC_EXPLIGHTS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,467,24,54,10
+    CONTROL         "Export absolute PRS",IDC_ABSOLUTEPRS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,185,86,81,10
+    CONTROL         "Opacity map in diffuse alpha",IDC_OPAINALPHA,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,332,64,105,10
+    CONTROL         "Export filenames only",IDC_TEXNAMEONLY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,332,54,82,10
+    CONTROL         "Keep displacement texture",DC_KEEPTEXDSP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,332,214,99,10
+    CONTROL         "Keep refraction texture",DC_KEEPTEXRFR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,332,205,87,10
+    CONTROL         "Keep reflection texture",DC_KEEPTEXRFL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,332,195,87,10
+    CONTROL         "Keep bump texture",DC_KEEPTEXBUM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,332,185,75,10
+    CONTROL         "Keep filter texture",DC_KEEPTEXFIL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,332,176,71,10
+    CONTROL         "Keep opacity texture",DC_KEEPTEXOPA,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,332,166,81,10
+    CONTROL         "Keep self-illum texture",DC_KEEPTEXSLF,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,332,156,84,10
+    CONTROL         "Keeep shining strength texture",DC_KEEPTEXSTR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,332,147,111,10
+    CONTROL         "Keep shininess texture",DC_KEEPTEXSHI,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,332,137,87,10
+    CONTROL         "Keep specular texture",DC_KEEPTEXSPE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,332,128,85,10
+    CONTROL         "Keep diffuse texture",DC_KEEPTEXDIF,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,332,118,79,10
+    CONTROL         "Keep ambient texture",IDC_KEEPTEXAMB,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,332,108,83,10
+    COMBOBOX        IDC_MAXTEXSIZE,333,36,108,93,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP,WS_EX_DLGMODALFRAME
+    LTEXT           "Max. texture size",IDC_STATIC,329,26,54,8
+    CONTROL         "Compute convex hull",IDC_CONVEXHULL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,185,96,82,10
+    CONTROL         "Compute bounding sphere",IDC_BSPHERE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,185,106,99,10
+    CONTROL         "Compute inertia tensor",IDC_INERTIA,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,185,115,86,10
+    LTEXT           "Extension",IDC_EXTENSION,17,39,128,8
+    CONTROL         "Export visibility tracks",IDC_VISTRACK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,20,182,83,10
+    CONTROL         "Consolidate mesh",IDC_CONSOLIDATE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,197,182,71,10
+    GROUPBOX        "Consolidation",IDC_STATIC,188,169,107,79
+    CONTROL         "Compute face normals",IDC_FACENORMALS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,197,192,86,10
+    CONTROL         "Compute vertex normals",IDC_VTXNORMALS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,197,202,86,10
+    CONTROL         "Export Normal Info",IDC_EXPNORMINFO,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,197,212,74,10
+    PUSHBUTTON      "Load settings",IDC_LOADSETTINGS,16,63,138,14,0,
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    PUSHBUTTON      "Save settings",IDC_SAVESETTINGS,16,79,137,14,0,
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    LTEXT           "Message",IDC_MESSAGE,17,49,113,8
+    CONTROL         "Export target nodes",IDC_TARGET,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,185,144,102,10
+    CONTROL         "Export hidden nodes",IDC_EXPHIDDEN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,20,192,110,10
+    CONTROL         "Slider1",IDC_SLIDER1,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,467,261,52,10
+    LTEXT           "100 frames/sample",IDC_SRATE,519,260,65,8
+    CONTROL         "Export edge visibility",IDC_EDGEVIS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,185,125,104,10
+    CONTROL         "Make manifold",IDC_MANIFOLD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,185,134,89,10
+    GROUPBOX        "Shapes",IDC_STATIC,320,235,129,34
+    CONTROL         "Export shapes",IDC_EXPSHAPES,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,332,247,96,10
+    CONTROL         "Export bones and BIPED parts",IDC_EXPBIPED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,186,295,114,10
+    CONTROL         "Flip horizontal",IDC_FLIPH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,332,74,58,10
+    CONTROL         "Flip vertical",IDC_FLIPV,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,392,74,60,10
+    GROUPBOX        "",IDC_STATIC,325,100,120,127
+    CONTROL         "Weight normals by area",IDC_WEIGHTBYAREA,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,197,222,91,10
+    GROUPBOX        "Characters",IDC_STATIC,175,265,133,57
+    CONTROL         "Always export motion",IDC_ALWAYSEXPORTMOTION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,186,304,107,11
+    CONTROL         "Quantize",IDC_QUANTIZE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,332,83,103,10
+    CONTROL         "Export FOV controller",IDC_FOVTRACK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,467,127,104,10
+    CONTROL         "Export attributes controllers",IDC_EXPCAMCTRL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,467,136,102,10
+    CONTROL         "Export material controllers",IDC_MTLANIM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,467,200,100,10
+    CONTROL         "Export attributes controllers",IDC_EXPLITCTRL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,467,33,107,10
+    GROUPBOX        "Helpers",IDC_STATIC,319,271,131,22
+    CONTROL         "Export helpers",IDC_EXPHELPERS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,333,280,101,10
+    CONTROL         "Export PHYSIQUE",IDC_EXPPHYSIQUE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,186,277,113,10
+    CONTROL         "Unload plugs after export",IDC_AUTOUNLOAD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,20,202,112,10
+    CONTROL         "Convert shapes to meshes",IDC_SHAPETOMESH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,332,256,108,10
+    CONTROL         "Override specular color (white)",IDC_FORCESPE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,467,180,114,10
+    CONTROL         "Override filter color (black)",IDC_FORCEFIL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,467,190,112,10
+    CONTROL         "Auto-load settings",IDC_AUTOLOAD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,18,114,129,10
+    CONTROL         "Optimize",IDC_CACHEOPTIMIZE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,197,232,89,10
+    EDITTEXT        IDC_GLOBAL_SCALE,72,225,51,14,ES_AUTOHSCROLL
+    LTEXT           "Global scale :",IDC_STATIC,23,227,45,8
+    PUSHBUTTON      "About plug-in",IDC_ABOUT_PLUG,15,129,138,14,0,
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         "Discard instances",IDC_DISCARD_INSTANCES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,185,154,106,10
+    CONTROL         "Export projector maps",IDC_PROJECTOR_MAPS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,467,42,111,10
+    GROUPBOX        "IK",IDC_STATIC,459,276,129,25
+    CONTROL         "Export IK data",IDC_EXPORT_IK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,467,287,112,10
+    PUSHBUTTON      "OK",IDOK,491,308,50,14
+    PUSHBUTTON      "CANCEL",IDCANCEL,544,308,50,14
+    COMBOBOX        IDC_LOCALE,15,251,129,30,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "",IDC_STATIC,18,216,126,29
+    CONTROL         "Export SKIN",IDC_EXPSKIN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,186,286,108,10
+    CONTROL         "Enable sharing",IDC_MATERIAL_SHARING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,467,209,103,10
+    CONTROL         "Keyframing",IDC_KEYFRAMING,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,467,250,51,10
+    CONTROL         "Sampling",IDC_SAMPLING,"Button",BS_AUTORADIOBUTTON,526,
+                    250,45,10
+    CONTROL         "All frames",IDC_ALLFRAMES,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,467,239,46,10
+    CONTROL         "Single frame",IDC_SINGLEFRAME,"Button",
+                    BS_AUTORADIOBUTTON,526,240,55,10
+    CONTROL         "Spin2",IDC_SCALE_SPINNER,"msctls_updown32",
+                    UDS_ARROWKEYS,127,225,10,14
+    GROUPBOX        "Space warp objects",IDC_STATIC,319,296,130,26
+    CONTROL         "Export space warp objects",IDC_EXPWARP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,333,306,106,10
+    CONTROL         "Discard texture alpha",IDC_DISCARD_ALPHA,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,332,92,86,10
+END
+
+IDD_DIALOG2 DIALOGEX 0, 0, 155, 116
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "Motion file"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,16,86,124,14
+    EDITTEXT        IDC_MOTIONNAME,21,27,110,14,ES_AUTOHSCROLL
+    LTEXT           "Enter the internal motion name",IDC_STATIC,21,17,128,8
+    CONTROL         "",IDC_COMBOBOXEX1,"ComboBoxEx32",CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,21,61,113,184
+    LTEXT           "Enter the motion type",IDC_STATIC,22,48,115,8
+END
+
+IDD_ADD_USER_PROP DIALOGEX 0, 0, 305, 66
+STYLE DS_MODALFRAME | WS_POPUP
+EXSTYLE WS_EX_CLIENTEDGE
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,248,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,248,24,50,14
+    EDITTEXT        IDC_EDIT1,7,14,231,14,ES_AUTOHSCROLL
+    LTEXT           "Msg0",IDC_MSG0,7,44,291,8
+END
+
+IDD_SPHERE_DIALOG0 DIALOG DISCARDABLE  0, 0, 108, 24
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Diameter",IDC_CREATEDIAMETER,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,7,7,43,10
+    CONTROL         "Radius",IDC_CREATERADIUS,"Button",BS_AUTORADIOBUTTON,63,
+                    7,38,10
+END
+
+IDD_SPHERE_DIALOG1 DIALOG DISCARDABLE  0, 0, 108, 104
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_TI_POSX,"CustEdit",WS_TABSTOP,51,7,42,14
+    CONTROL         "",IDC_TI_POSXSPIN,"SpinnerControl",WS_TABSTOP,94,7,7,14
+    CONTROL         "",IDC_TI_POSY,"CustEdit",WS_TABSTOP,51,22,42,14
+    CONTROL         "",IDC_TI_POSZ,"CustEdit",WS_TABSTOP,51,37,42,14
+    CONTROL         "",IDC_TI_POSYSPIN,"SpinnerControl",WS_TABSTOP,94,22,7,
+                    14
+    CONTROL         "",IDC_TI_POSZSPIN,"SpinnerControl",WS_TABSTOP,94,37,7,
+                    14
+    CONTROL         "",IDC_RADIUS,"CustEdit",WS_TABSTOP,51,52,42,14
+    CONTROL         "",IDC_RADSPINNER,"SpinnerControl",WS_TABSTOP,94,52,7,14
+    CONTROL         "Create",IDC_TI_CREATE,"CustButton",WS_TABSTOP,28,73,50,
+                    14
+END
+
+IDD_SPHERE_DIALOG2 DIALOG DISCARDABLE  0, 0, 108, 185
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_RADIUS,"CustEdit",WS_TABSTOP,37,7,50,14
+    CONTROL         "",IDC_RADSPINNER,"SpinnerControl",WS_TABSTOP,92,7,7,14
+    CONTROL         "",IDC_SEGMENTS,"CustEdit",WS_TABSTOP,37,25,50,14
+    CONTROL         "",IDC_SEGSPINNER,"SpinnerControl",WS_TABSTOP,91,25,7,14
+    CONTROL         "Smooth",IDC_OBSMOOTH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,43,40,10
+    CONTROL         "",IDC_HEMISPHERE,"CustEdit",WS_TABSTOP,39,55,50,14
+    CONTROL         "",IDC_HEMISPHERESPINNER,"SpinnerControl",WS_TABSTOP,93,
+                    56,7,14
+    CONTROL         "Chop",IDC_HEMI_CHOP,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,7,78,33,10
+    CONTROL         "Squash",IDC_HEMI_SQUASH,"Button",BS_AUTORADIOBUTTON,55,
+                    79,40,10
+    CONTROL         "Slice on",IDC_SC_SLICEON,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,94,41,10
+    CONTROL         "",IDC_SC_SLICE1,"CustEdit",WS_TABSTOP,29,105,50,14
+    CONTROL         "",IDC_SC_SLICE1SPIN,"SpinnerControl",WS_TABSTOP,85,105,
+                    7,14
+    CONTROL         "",IDC_SC_SLICE2,"CustEdit",WS_TABSTOP,27,125,50,14
+    CONTROL         "",IDC_SC_SLICE2SPIN,"SpinnerControl",WS_TABSTOP,84,124,
+                    7,14
+    CONTROL         "Recenter",IDC_HEMI_RECENTER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,146,45,10
+    CONTROL         "Gen UVs",IDC_GENTEXTURE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,159,45,10
+END
+
+IDD_CUSTOM_MATERIAL DIALOG DISCARDABLE  0, 0, 216, 325
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_SUBMAP,"CustButton",WS_TABSTOP,79,18,103,13
+    CONTROL         "",IDC_COLOR,"ColorSwatch",0x0,79,35,33,14
+    LTEXT           "Submap",IDC_STATIC,41,20,27,8
+    LTEXT           "Color",IDC_STATIC,47,37,17,8
+    LTEXT           "Checkbox",IDC_STATIC,38,55,33,8
+    CONTROL         "Check1",IDC_CHECKBOX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,79,54,41,10
+    CONTROL         "",IDC_EDIT,"CustEdit",WS_TABSTOP,94,68,50,14
+    CONTROL         "",IDC_SPINNER,"SpinnerControl",WS_TABSTOP,145,68,50,14
+    CONTROL         "Shader",IDC_FILENAME,"CustButton",WS_TABSTOP,22,70,50,
+                    14
+    CONTROL         "",IDC_EDITTEXT,"CustEdit",WS_TABSTOP,23,95,174,184
+    CONTROL         3010,IDC_STATIC,"Static",SS_BITMAP,70,290,69,12
+END
+
+IDD_FLEXPORTER_MATERIAL DIALOG DISCARDABLE  0, 0, 216, 257
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_SHADER_FILENAME,"CustButton",WS_TABSTOP,55,11,154,
+                    14
+    LTEXT           "Shader file",IDC_STATIC,15,15,34,8
+    CONTROL         "",IDC_USER_PROPS,"CustEdit",WS_TABSTOP,7,96,202,154
+    LTEXT           "User properties : (Ctrl + Return to go to next line)",
+                    IDC_STATIC,13,83,152,8
+    CONTROL         "",IDC_DECAL_TEXTURE,"CustButton",WS_TABSTOP,55,26,154,
+                    14
+    CONTROL         "",IDC_DETAIL_TEXTURE,"CustButton",WS_TABSTOP,55,41,154,
+                    14
+    LTEXT           "Decal map",IDC_STATIC,15,29,35,8
+    LTEXT           "Detail map",IDC_STATIC,15,44,34,8
+    CONTROL         "",IDC_BILLBOARD_TEXTURE,"CustButton",WS_TABSTOP,55,56,
+                    154,14
+    LTEXT           "Billboard map",IDC_STATIC,9,59,43,8
+END
+
+IDD_VERTEX_LIGHTER DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Vertex lighter options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Compute",IDOK,122,13,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,122,30,50,14
+    CONTROL         "Compute shadows",IDC_PRELIGHTER_SHADOWS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,18,12,105,10
+    COMBOBOX        IDC_COLOR_SMOOTHING,19,59,89,150,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Include specular term",IDC_PRELIGHTER_SPECULAR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,18,21,93,10
+    CONTROL         "Clamp results",IDC_PRELIGHTER_CLAMP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,18,30,90,10
+    GROUPBOX        "Color smoothing",IDC_STATIC,10,48,107,31
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_UTILITY_PANEL, DIALOG
+    BEGIN
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 328
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 352
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+
+    IDD_EXPORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 67
+    END
+
+    IDD_MESSAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 394
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 293
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 594
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 322
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 148
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_ADD_USER_PROP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 298
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 59
+    END
+
+    IDD_SPHERE_DIALOG0, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 101
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 17
+    END
+
+    IDD_SPHERE_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 101
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 97
+    END
+
+    IDD_SPHERE_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 101
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 177
+    END
+
+    IDD_CUSTOM_MATERIAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 318
+    END
+
+    IDD_FLEXPORTER_MATERIAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 250
+    END
+
+    IDD_VERTEX_LIGHTER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_OPTIONS DLGINIT
+BEGIN
+    IDC_MAXTEXSIZE, 0x403, 10, 0
+0x6e55, 0x696c, 0x696d, 0x6574, 0x0064, 
+    IDC_MAXTEXSIZE, 0x403, 10, 0
+0x3032, 0x3834, 0x322a, 0x3430, 0x0038, 
+    IDC_MAXTEXSIZE, 0x403, 10, 0
+0x3031, 0x3432, 0x312a, 0x3230, 0x0034, 
+    IDC_MAXTEXSIZE, 0x403, 8, 0
+0x3135, 0x2a32, 0x3135, 0x0032, 
+    IDC_MAXTEXSIZE, 0x403, 8, 0
+0x3532, 0x2a36, 0x3532, 0x0036, 
+    IDC_MAXTEXSIZE, 0x403, 8, 0
+0x3231, 0x2a38, 0x3231, 0x0038, 
+    IDC_MAXTEXSIZE, 0x403, 6, 0
+0x3436, 0x362a, 0x0034, 
+    IDC_MAXTEXSIZE, 0x403, 6, 0
+0x3233, 0x332a, 0x0032, 
+    IDC_MAXTEXSIZE, 0x403, 6, 0
+0x3631, 0x312a, 0x0036, 
+    IDC_MAXTEXSIZE, 0x403, 19, 0
+0x654e, 0x7261, 0x7365, 0x2074, 0x6f70, 0x6577, 0x2072, 0x666f, 0x3220, 
+"\000" 
+    IDC_LOCALE, 0x403, 20, 0
+0x6553, 0x4c74, 0x636f, 0x6c61, 0x2065, 0x202d, 0x6e45, 0x6c67, 0x7369, 
+0x0068, 
+    IDC_LOCALE, 0x403, 19, 0
+0x6553, 0x4c74, 0x636f, 0x6c61, 0x2065, 0x202d, 0x7246, 0x6e65, 0x6863, 
+"\000" 
+    0
+END
+
+IDD_DIALOG2 DLGINIT
+BEGIN
+    IDC_COMBOBOXEX1, 0x1234, 10, 0
+0x6e55, 0x6564, 0x6966, 0x656e, 0x0064, 
+    IDC_COMBOBOXEX1, 0x1234, 5, 0
+0x6449, 0x656c, "\000" 
+    IDC_COMBOBOXEX1, 0x1234, 5, 0
+0x6157, 0x6b6c, "\000" 
+    IDC_COMBOBOXEX1, 0x1234, 5, 0
+0x754a, 0x706d, "\000" 
+    IDC_COMBOBOXEX1, 0x1234, 4, 0
+0x7552, 0x006e, 
+    IDC_COMBOBOXEX1, 0x1234, 7, 0
+0x7441, 0x6174, 0x6b63, "\000" 
+    IDC_COMBOBOXEX1, 0x1234, 5, 0
+0x694b, 0x6b63, "\000" 
+    0
+END
+
+IDD_VERTEX_LIGHTER DLGINIT
+BEGIN
+    IDC_COLOR_SMOOTHING, 0x403, 13, 0
+0x2030, 0x4428, 0x7369, 0x6261, 0x656c, 0x2964, "\000" 
+    IDC_COLOR_SMOOTHING, 0x403, 8, 0
+0x2031, 0x6170, 0x7373, 0x0065, 
+    IDC_COLOR_SMOOTHING, 0x403, 9, 0
+0x2032, 0x6170, 0x7373, 0x7365, "\000" 
+    IDC_COLOR_SMOOTHING, 0x403, 9, 0
+0x2033, 0x6170, 0x7373, 0x7365, "\000" 
+    IDC_COLOR_SMOOTHING, 0x403, 9, 0
+0x2034, 0x6170, 0x7373, 0x7365, "\000" 
+    IDC_COLOR_SMOOTHING, 0x403, 9, 0
+0x2035, 0x6170, 0x7373, 0x7365, "\000" 
+    IDC_COLOR_SMOOTHING, 0x403, 9, 0
+0x2036, 0x6170, 0x7373, 0x7365, "\000" 
+    IDC_COLOR_SMOOTHING, 0x403, 9, 0
+0x2037, 0x6170, 0x7373, 0x7365, "\000" 
+    IDC_COLOR_SMOOTHING, 0x403, 9, 0
+0x2038, 0x6170, 0x7373, 0x7365, "\000" 
+    IDC_COLOR_SMOOTHING, 0x403, 9, 0
+0x2039, 0x6170, 0x7373, 0x7365, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP  DISCARDABLE     "Flexporter2.bmp"
+IDB_BITMAP2             BITMAP  DISCARDABLE     "Flexporter3.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MATCACLASSNAME      "CustomMaterial"
+    IDS_CUSTOM_MATERIAL     "Custom Material"
+    IDS_COLOR               "Color"
+    IDS_SUBMAP              "Submap"
+    IDS_SELECT_SHADER       "Select shader"
+    IDS_DEFAULT_SHADER      "Shader.sha"
+    IDS_SHADER_TYPES        "Shader files (*.sha)|*.sha|All|*.*|"
+    IDS_FLXMATCLASSNAME     "FlexporterMaterial"
+    IDS_FLEXPORTER_MATERIAL "Flexporter parameters"
+END
+
+#endif    // French (France) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE 12, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\IceExporter.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.fra\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,60 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*
+ *	FLEXPORTER - a flexible exporter
+ *	Copyright (C) 2000-2004 Pierre Terdiman
+ *	Homepage: http://www.codercorner.com/Flexporter.htm
+ */
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Precompiled Header
+#include "Stdafx.h"
+
+using namespace IceExporter;
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+// IceAbout dialog
+
+
+IceAbout::IceAbout(CWnd* pParent /*=NULL*/)
+	: CDialog(IceAbout::IDD, pParent)
+{
+	//{{AFX_DATA_INIT(IceAbout)
+	m_Version = _T("");
+	//}}AFX_DATA_INIT
+}
+
+
+void IceAbout::DoDataExchange(CDataExchange* pDX)
+{
+	CDialog::DoDataExchange(pDX);
+	//{{AFX_DATA_MAP(IceAbout)
+	DDX_Control(pDX, IDC_NEWVERSION, m_NewVersion);
+	DDX_Text(pDX, IDC_VERSION, m_Version);
+	//}}AFX_DATA_MAP
+}
+
+
+BEGIN_MESSAGE_MAP(IceAbout, CDialog)
+	//{{AFX_MSG_MAP(IceAbout)
+	//}}AFX_MSG_MAP
+END_MESSAGE_MAP()
+
+/////////////////////////////////////////////////////////////////////////////
+// IceAbout message handlers
+
+BOOL IceAbout::OnInitDialog() 
+{
+	CDialog::OnInitDialog();
+	
+	m_NewVersion.SetURL("http://www.codercorner.com/Flexporter.htm");
+	
+	return TRUE;  // return TRUE unless you set the focus to a control
+	              // EXCEPTION: OCX Property Pages should return FALSE
+}
